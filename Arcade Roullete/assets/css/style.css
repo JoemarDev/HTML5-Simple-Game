@@ -24,6 +24,17 @@ body {
 }
 
 
+#game .scroll::-webkit-scrollbar-thumb {
+    background-color: #7d5020;
+}
+
+#game .scroll::-webkit-scrollbar-track {
+    border: 1px solid #7d5020;
+    background-color: #d4b36b;
+}
+
+
+
 /* Config Buttons  */
 .config {
     position: absolute;
@@ -172,7 +183,7 @@ span {
     border-bottom: 1px solid #cba45f;
     padding-left: 70px;
     display: flex;
-    font-size: 14px;
+    font-size: 12px;
     align-items: center;
     justify-content: space-between;
 }
