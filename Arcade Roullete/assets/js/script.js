@@ -93,7 +93,7 @@ const RunAnimation = (res,ticker) => {
 
     let resPosition = Pos[res];
 
-    resPosition += ticker;
+    resPosition += Number(ticker);
 
     $('#roullete .front').css('opacity', 0);
 
