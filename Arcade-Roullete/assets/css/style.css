@@ -5,6 +5,7 @@ body {
     align-items: center;
     justify-content: center;
     background: #0d031e;
+    min-width : 850px;
 }
 
 
