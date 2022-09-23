@@ -80,7 +80,7 @@ const CheckConfigSaved = () => {
 
 const GetResult = async() =>{
     $.ajax(URL + '/arcade-routellete').then((res) => {
-        RunAnimation((res.result - 1),1);
+        RunAnimation((res.result - 1),res.rand_pos);
         setTimeout(() => {
             populateResult(res,'result');
             backgroundMusic.play();
@@ -89,15 +89,9 @@ const GetResult = async() =>{
 }
 
 
-const RunAnimation = (res, distance) => {
+const RunAnimation = (res,ticker) => {
 
-    const rand = Math.floor(Math.random() * Pos.length);
-
-    const plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-
-    const ticker = Math.floor(Math.random() * 20) * plusOrMinus;
-
-    let resPosition = Pos[res] * distance;
+    let resPosition = Pos[res];
 
     resPosition += ticker;
 
