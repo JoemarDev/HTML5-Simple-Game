@@ -143,6 +143,7 @@ const UpdateBetHistoryTable = () => {
     let betsHistory = localStorage.getItem('bets');
 
     if(betsHistory) {
+        $('.bet-history h3').hide();
         $('.bet-lists').html('');
         betsHistory = JSON.parse(betsHistory);
 
