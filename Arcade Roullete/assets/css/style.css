@@ -1,6 +1,10 @@
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d031e;
 }
 
 
@@ -241,6 +245,71 @@ span {
 .history .icon_sinsu_4 {
     background-position: -156px -791px
 }
+
+
+/* Result Box */
+
+#game .result_box {
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 314px;
+    height: 75px;
+    background-position: 0 -558px;
+    z-index: 9900;
+    padding: 56px 20px 0;
+}
+
+#game .result_box .content_box {
+    text-align: center;
+    height: 54px;
+    line-height: 54px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
+}
+
+#game  .result_box .res-round {
+    font-weight: 700;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#game .result_box .result_icon {
+    width: 54px;
+    height: 54px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#game  .result_box  .icon_sinsu_1 {
+    background-position: 0 -695px
+}
+
+#game  .result_box  .icon_sinsu_2 {
+    background-position: -54px -695px;
+}
+
+#game  .result_box  .icon_sinsu_3 {
+    background-position: -108px -695px;
+}
+
+#game  .result_box  .icon_sinsu_4 {
+    background-position: -162px -695px;
+}
+
+#game  .result_box .icon_result_1 {
+    background-position: -216px -695px;
+}
+
+#game  .result_box .icon_result_2 {
+    background-position: -270px -695px;
+}
+
 
 
 /* Help Style */

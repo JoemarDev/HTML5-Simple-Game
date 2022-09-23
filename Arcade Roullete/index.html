@@ -10,13 +10,13 @@
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
 </head>
 
-<body>
+<body onload="InitSounds()">
     <div id="game">
-
+        
         <!-- Config Section -->
         <ul class="config">
-            <li class="sound" onclick="Toogle(this);"></li>
-            <li class="music" onclick="Toogle(this);"></li>
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
             <li class="reload" onclick="ReloadWindow();"></li>
         </ul>
         <!-- Config Section -->
@@ -34,7 +34,11 @@
                     <label class="time">-</label>
                 </div>
             </div>
+            <div class="routelle-image result_box"></div>
         </div>
+
+        
+
         <!-- Roullete Section -->
 
         <!-- History Section -->
