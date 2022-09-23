@@ -22,6 +22,8 @@ body {
     font-family: 'NotoSansKR-regular';
 }
 
+
+
 #game .scroll::-webkit-scrollbar {
     width: 10px;
     background-color: #d4b36b;
@@ -334,4 +336,164 @@ span {
 .help ul li {
     line-height: 1.8;
     font-size: 12px;
+}
+
+/* Betting Section Style */
+.bet-section {
+    position : absolute;
+    width : 100%;
+    left : 0;
+    top: 47.8%;
+    z-index : 15000;
+}
+
+.bet-history {
+
+    width: 80%;
+    margin: auto;
+    margin-top : 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size : 14px;
+    color : #333;
+    position : relative;
+}
+
+.bet-history h3 {
+    position : absolute;
+    transform : translate(-50%,  -50%);
+    left : 50%;
+    top : 50%;
+    display : none;
+}
+
+.bet-history:last-child {
+    margin-top : 15px;
+
+}
+
+.bet-history:last-child .wrapper {
+    height : 200px;
+    width : 100%;
+    overflow-y : scroll;
+}
+
+
+.bet-history table {
+    width : 100%;
+    border-collapse: collapse;  
+}
+
+.bet-history table td {
+    text-align : center;
+    padding : 10px 5px;
+    font-size : 12px;
+    border-bottom : 1px solid #d1be8c;
+}
+
+.bet-history table th {
+    height: 40px;
+    line-height: 40px;
+    border-top: 2px solid #cba45f;
+    border-bottom: 2px solid #cba45f;
+    background-color: #d9b26c;
+}
+
+.bet-history span {
+    font-weight : 300;
+}
+
+.bet-history  label {
+    font-weight : 900;
+    margin-right : 5px;
+}
+
+.bet-section ul {
+    display : flex;
+    padding : 0;
+    list-style : none;
+    color : #333;
+    font-weight : 600;
+    margin : 0;
+    font-size : 14px;
+}
+
+.bet-section ul li {
+    padding : 5px 12px;
+    border: 2px solid #8b6638;
+    margin: 2px;
+    border-radius: 3px;
+    background: #e8d299;
+    cursor : pointer;
+    user-select: none;
+}
+
+.bet-section ul li.on {
+    background: #ffcf51;
+    border: 2px solid #f1890e;
+    color : #0062a1;
+}
+
+.bet-section ul li:active {
+    transform : scale(0.95);
+    opacity : 0.9;
+}
+
+
+.bet-section button {
+    cursor : pointer;
+}
+
+.bet-section .sun {
+    width: 204px;
+    height: 50px;
+    border: none;
+    background-position: -205px -459px;
+}
+
+
+.bet-section .moon {
+    width: 204px;
+    height: 50px;
+    border: none;
+    background-position: -205px -509px;
+}
+
+.bet-section .sun:active {
+    background-position: 0 -459px;
+    transform : scale(0.97);
+    transition : transform 0.2s;
+}
+
+.bet-section .moon:active {
+    background-position: 0 -509px;
+    transform : scale(0.97);
+    transition : transform 0.2s;
+}
+
+
+.bet-section .bet-button {
+    width : 85%;
+    margin : auto;
+    display : flex;
+    align-items : center;
+    justify-content : space-between;
+}
+
+
+/* Banner Styles */
+.banner-section {
+    position: absolute;
+    left: 0;
+    top: 74.3%;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-section img {
+    width: 85%;
+    margin: auto;
+    height: 115px;
+    object-fit: cover;
 }

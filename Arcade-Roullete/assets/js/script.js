@@ -5,6 +5,8 @@ const resultMusic = new Audio('./assets/sounds/bing_play.mp3');
 
 let isBrowserSoundReady = false;
 let globalSeconds = 0;
+let round = 0;
+let isGameReady = false;
 
 let history = [];
         //     1     4     4     3     3     2     2     1
@@ -19,17 +21,26 @@ const ReloadWindow = (elem) => {
     window.location.reload();
 }
 
+const GetGameRound = (offset) => {
+    const d = new Date();
+    const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    const nd = new Date(utc + (3600000 * offset));
+    const GameHour = nd.getHours();
+    const GameMinute = nd.getMinutes();
+    
+    return ((GameHour * 60) + GameMinute) + 1;
+
+}
 const RunGameTimeAndRound = (city, offset) => {
+
     setInterval(() => {
         // convert the current time to korean timezone
         const d = new Date();
         const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
         const nd = new Date(utc + (3600000 * offset));
-
-        const GameHour = nd.getHours();
-        const GameMinute = nd.getMinutes();
         
-        const GameRound = ((GameHour * 60) + GameMinute) + 1;
+        const GameRound = GetGameRound(offset);
+
         // get korean timezone seconds
         const GameSec = (60 - nd.getSeconds()).toString().padStart(2, '0');
         
@@ -195,9 +206,9 @@ const ResetResultBox = () => {
 }
 
 
-const InitGame = () => {
+const InitGame = async() => {
     RefreshHistory();
-    RunGameTimeAndRound('korea', '+9');
+    await RunGameTimeAndRound('korea', '+9'); 
 }
 
 const inIframe = () => {
