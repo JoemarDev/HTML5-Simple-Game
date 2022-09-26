@@ -6,5 +6,5 @@ Simple Game made with html css jquery.
 
 
 ## HTML5 Games List
- - <a href="https://joemardev.github.io/HTML5-Simple-Game/Arcade-Roullete/">Arcade Roullete</a>
- - <a href="https://joemardev.github.io/HTML5-Simple-Game/Bird-and-egg/">The Bird And The Egg</a>
+ 1. <a href="https://joemardev.github.io/HTML5-Simple-Game/Arcade-Roullete/">Arcade Roullete</a>
+ 2. <a href="https://joemardev.github.io/HTML5-Simple-Game/Bird-and-egg/">The Bird And The Egg</a>
