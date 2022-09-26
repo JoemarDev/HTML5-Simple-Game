@@ -5,13 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/css/style.css" rel="stylesheet" />
     <title>Bird And Egg</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    
 </head>
 
-<body>
+<body onload="InitSounds()">
     <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+        <div id="game-screen">
 
+            <div class="game-clock">2022.10.26 11:04:42</div>
+
+            <!-- Timer Box -->
+            <div class="timer_box">
+                <strong id="timer" class="timer">-</strong>초 후
+                <strong id="round" class="round">-</strong>회차 결과가 발표됩니다.
+            </div>
+            <!-- Timer Box -->
+
+
+            <!-- Result Box Element -->
+
+            <div class="game-sprite result_box" >
+                <h3><span class="round-result-box">-</span> 회차결과</h3>
+                <div class="rcontent">
+                    <div class="game-sprite icon_leftright_2"></div>
+                    <div class="game-sprite icon_count_4"></div>
+                    <div class="game-sprite icon_result_2"></div>
+                </div>
+            </div>
+
+
+
+            <!--  Bird Element -->
+            <span class="game-sprite tab_jebi_1"></span>
+            <span class="game-sprite tab_jebi_2"></span>
+            
+            <!-- Bounce Counter Element -->
+            <span class="game-sprite tab_see"></span>
+            <span class="tab_count">-</span>
+
+            <!-- Result Elements -->
+            <span class="game-sprite tab_result_1"></span>
+            <span class="game-sprite tab_bak_1 "></span>
+            <span class="game-sprite tab_result_2"></span>
+            <span class="game-sprite tab_bak_2 "></span>
+
+
+        </div>
+
+        
+        <!-- History Elements -->
+        <div class="history scroll">
+            <div class="listitem">
+                <div class="round"><strong>828</strong>회차</div>
+                <div class="game-sprite icon_leftright_1"></div>
+                <div class="game-sprite icon_count_3"></div>
+                <div class="game-sprite icon_result_2"></div>
+            </div>
+        </div>
+        
     </div>
 </body>
-
+<script src="./assets/js/script.js"></script>
 </html>

@@ -16,9 +16,9 @@ body {
 }
 
 #game {
-    background: url('../images/bg.jpg');
+    background: url('../images/game-only.png');
     width: 850px;
-    height: 1349px;
+    height: 897px;
     position: relative;
     font-family: 'NotoSansKR-regular';
 }
