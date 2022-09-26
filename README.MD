@@ -2,7 +2,7 @@
 Simple Game made with html css jquery.
 
 
-<img src="https://i.ibb.co/NsFD5Y8/Group-3.png" width="250">  |  <img src="https://i.ibb.co/B4CJjb9/Group-2.png" width="250">
+<img src="https://i.ibb.co/NsFD5Y8/Group-3.png" width="250"> <img src="https://i.ibb.co/B4CJjb9/Group-2.png" width="250">
 
 
 ## HTML5 Games List
