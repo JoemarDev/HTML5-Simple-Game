@@ -41,9 +41,10 @@ body {
 #game {
     background: url('../images/bg.png');
     width: 850px;
-    height: 897px;
+    height: 850px;
     position: relative;
     font-family: 'NotoSansKR-regular';
+    background-repeat: no-repeat;
 }
 
 
@@ -109,6 +110,7 @@ body {
     left: 65px;
     top: 233px;
 }
+
 .game-clock {
     position: absolute;
     top: 2px;
@@ -118,6 +120,7 @@ body {
     color: #000;
     font-size: 14px;
 }
+
 #game-screen .timer_box {
     position: absolute;
     top: 40px;
@@ -133,7 +136,7 @@ body {
     font-size: 13px;
 }
 
-#game-screen  .timer_box .timer {
+#game-screen .timer_box .timer {
     color: #ed2026;
 }
 
@@ -155,7 +158,7 @@ body {
     display: none;
 }
 
-#game-screen  .tab_jebi_1 {
+#game-screen .tab_jebi_1 {
     display: none;
     position: absolute;
     top: 115px;
@@ -254,7 +257,7 @@ body {
 
 
 /* Result Box Style */
-#game-screen  .result_box {
+#game-screen .result_box {
     display: none;
     position: absolute;
     top: 190px;
@@ -267,14 +270,14 @@ body {
     text-align: center;
 }
 
-#game-screen  .result_box .rcontent {
+#game-screen .result_box .rcontent {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#game-screen  .result_box h3 {
+#game-screen .result_box h3 {
     margin: 0;
     margin-bottom: 20px;
     font-size: 12px;
@@ -303,7 +306,7 @@ body {
     background-position: -68px -457px;
 }
 
-#game-screen  .icon_count_4 {
+#game-screen .icon_count_4 {
     background-position: -102px -457px;
 }
 
@@ -311,7 +314,7 @@ body {
     background-position: -136px -457px;
 }
 
-#game-screen   .icon_result_2 {
+#game-screen .icon_result_2 {
     background-position: -170px -457px;
 }
 
