@@ -10,24 +10,34 @@
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
     
 </head>
-<body>
+<body onload="InitSounds()">
     <div id="game">
 
           <!-- Config Section -->
           <ul class="config">
-            <li class="sound" ></li>
-            <li class="music" ></li>
-            <li class="reload" ></li>
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
         </ul>
         <!-- Config Section -->
 
         <div id="game-screen">
+            
             <!-- Timer box section -->
             <div class="timer_box">
                 <strong id="timer" class="timer">-</strong> 후
                 <strong id="round" class="round">-</strong>회차 결과가 발표됩니다.
             </div>
             <!-- Timer Box Section -->
+
+            <!-- Result Box Section -->
+            <div class="game-sprite result_box" >
+                <div class="result_content">
+            
+                </div>
+            </div>
+            <!-- Result Box Section -->
+
 
             <!-- Mario Top Section -->
             <div class="tab_top_box">
@@ -41,14 +51,27 @@
             <!-- Marion Bottom Section -->
             <div class="tab_botton_box">
                 <div class="in_content">
-                    <span class="imgmario tab_top_1"></span>
-                    <span class="imgmario tab_top_2"></span>
+                    <span class="game-sprite tab_top_1"></span>
+                    <span class="game-sprite tab_top_2"></span>
                 </div>
             </div>
             <!-- Mario Bottom Section -->
 
+            <!-- Tab Result Section -->
+            <div class="tab_result_box">
+                <span class="game-sprite tab_result_1"></span>
+                <span class="game-sprite tab_result_2"></span>
+            </div>
+            <!-- Tab Result Section -->
+        </div>
+
+    
+        <!-- History Section -->
+        <div class="history scroll">
+
 
         </div>
+
 
     </div>
 </body>

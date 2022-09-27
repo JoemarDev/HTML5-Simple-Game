@@ -202,7 +202,7 @@ const ResetResultBox = () => {
     setTimeout(() => {
         $('.result_box').hide();
         $('.result_box').html();
-    }, 5000);
+    }, 10000);
 }
 
 
