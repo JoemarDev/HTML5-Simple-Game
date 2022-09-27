@@ -1,0 +1,181 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #60d0e6;
+    min-width: 850px;
+}
+
+
+#game .scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #d4b36b;
+}
+
+#game .scroll::-webkit-scrollbar-thumb {
+    background-color: #7d5020;
+}
+
+#game .scroll::-webkit-scrollbar-track {
+    border: 1px solid #7d5020;
+    background-color: #d4b36b;
+}
+
+.game-sprite {
+    background: url('../images/img_mario.png');
+}
+
+
+/* fonts */
+@font-face {
+    font-family: 'NotoSansKR-regular';
+    src: url('../fonts/NotoSansKR-Regular.otf');
+}
+
+
+
+#game {
+    background: url('../images/bg.png');
+    width: 850px;
+    height: 897px;
+    position: relative;
+    font-family: 'NotoSansKR-regular';
+}
+
+
+/* Config Buttons  */
+.config {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.config li {
+    height: 42px;
+    width: 42px;
+    background: #fff;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.config li:active {
+    transform: scale(0.8);
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.config li.sound {
+    background: url('../images/img_mario.png');
+    background-position: -42px -404px;
+}
+
+.config .sound.on {
+    background: url('../images/img_mario.png');
+    background-position: -168px -404px;
+}
+
+.config li.music {
+    background: url('../images/img_mario.png');
+    background-position: 0 -404px;
+}
+
+.config .music.on {
+    background: url('../images/img_mario.png');
+    background-position: -126px -404px;
+}
+
+
+.config li.reload {
+    background: url('../images/img_mario.png');
+    background-position: -84px -404px;
+}
+
+
+/* Game Screen */
+#game-screen {
+    position: relative;
+    width: 397px;
+    height: 480px;
+    left: 60px;
+    top: 253px;
+}
+
+
+#game-screen .timer_box {
+    position: absolute;
+    top: 220px;
+    left: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color: #888;
+    background: #fff;
+    font-size: 12px;
+}
+
+#game-screen .timer_box .timer {
+    color: #ed2026;
+}
+
+#game-screen .timer_box .round {
+    color: #000;
+}
+
+
+
+/* Mario Top section style */
+#game-screen .tab_top_box {
+    position: absolute;
+    top: 77px;
+    left: 95px;
+    width: 206px;
+    height: 62px;
+    overflow: hidden;
+}
+
+
+#game-screen .tab_top_1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 37px;
+    height: 62px;
+    background-position: -303px -415px;
+}
+
+#game-screen .tab_top_2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 37px;
+    height: 62px;
+    background-position: -303px -353px;
+}
+
+#game-screen .tab_botton_box {
+    position: absolute;
+    top: 341px;
+    left: 95px;
+    width: 206px;
+    height: 115px;
+    overflow: hidden;
+}
+
+
+#game-screen .tab_botton_box .tab_top_1 {
+    top: -62px;
+}
+
+
+#game-screen  .tab_botton_box .tab_top_2 {
+    top: -62px;
+}
+
