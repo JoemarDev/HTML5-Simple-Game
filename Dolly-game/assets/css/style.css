@@ -1,0 +1,95 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b3d8ea;
+    min-width: 850px;
+}
+
+#game .scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #d4b36b;
+}
+
+#game .scroll::-webkit-scrollbar-thumb {
+    background-color: #7d5020;
+}
+
+#game .scroll::-webkit-scrollbar-track {
+    border: 1px solid #7d5020;
+    background-color: #d4b36b;
+}
+
+.game-sprite {
+    background: url('../images/DoolyGoSprite.png');
+}
+
+
+/* fonts */
+@font-face {
+    font-family: 'NotoSansKR-regular';
+    src: url('../fonts/NotoSansKR-Regular.otf');
+}
+
+#game {
+    background: url('../images/bg.png');
+    width: 850px;
+    height: 850px;
+    position: relative;
+    font-family: 'NotoSansKR-Regular';
+    background-repeat: no-repeat;
+}
+
+/* Config Buttons  */
+.config {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+
+
+.config li {
+    height: 42px;
+    width: 42px;
+    background: #fff;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.config li:active {
+    transform: scale(0.8);
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.config li.sound {
+    background: url('../images/DoolyGoSprite.png');
+    background-position: -663px -467px
+}
+
+.config .sound.on {
+    background: url('../images/DoolyGoSprite.png');
+    background-position: -534px -466px
+}
+
+.config li.music {
+    background: url('../images/DoolyGoSprite.png');
+    background-position: -621px -467px
+}
+
+.config .music.on {
+    background: url('../images/DoolyGoSprite.png');
+    background-position: -492px -466px
+}
+
+
+.config li.reload {
+    background: url('../images/DoolyGoSprite.png');
+    background-position: -705px -467px
+}
