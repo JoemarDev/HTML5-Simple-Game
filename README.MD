@@ -5,4 +5,4 @@ Simple Game made with html css jquery.
  1. <a href="https://joemardev.github.io/HTML5-Simple-Game/Arcade-Roullete/">Arcade Roullete</a>
  2. <a href="https://joemardev.github.io/HTML5-Simple-Game/Bird-and-egg/">The Bird And The Egg</a>
  3. <a href="https://joemardev.github.io/HTML5-Simple-Game/Mario/">Jump Mario</a>
- 4. <a href="https://joemardev.github.io/HTML5-Simple-Game/Dolly-game/">Jump Mario</a>
+ 4. <a href="https://joemardev.github.io/HTML5-Simple-Game/Dolly-game/">Dolly Go</a>
