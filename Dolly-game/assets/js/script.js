@@ -358,7 +358,7 @@ const populateResult = (res, type) => {
 
     let Res1 = res.top == 'left' ? 'icon_leftright_1' : 'icon_leftright_2';
     let Res2 = res.line == 3 ? 'icon_count_3' : 'icon_count_4';
-    let Res3 = res.type == 'left' ? 'icon_result_1' : 'icon_result_2';
+    let Res3 = res.type == 'odd' ? 'icon_result_1' : 'icon_result_2';
 
 
     if (type == 'history') {
