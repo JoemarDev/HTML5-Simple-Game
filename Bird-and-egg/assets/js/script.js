@@ -71,7 +71,6 @@ const FormatDate = (d) => {
     };
 
     return date.toLocaleString("ko-KR", options);
-   
 }
 const GetGameRound = (offset) => {
     const d = new Date();

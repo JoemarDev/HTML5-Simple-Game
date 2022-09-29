@@ -14,19 +14,127 @@
 
 </head>
 
-<body>
+<body onload="InitSounds()">
     <div id="game">
         <!-- Config Section -->
         <ul class="config">
-            <li class="sound"></li>
-            <li class="music"></li>
-            <li class="reload"></li>
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
         </ul>
 
         <!-- Game Screen Section -->
         <div id="game-screen">
-            <div class="game-clock"></div>
+
+            <div class="game-sprite result_box">
+                <div class="timer_box" id="test">
+                    <strong id="timer" class="timer">-</strong>초 후
+                    <strong id="round" class="round">-</strong>회차 추첨
+                </div>
+                <h2>지난회차결과</h2>
+                <div class="result">
+                   
+                </div>
+            </div>
+
+            <div class="game-sprite dooly_ani"></div>
+            <div class="game-sprite dooly_ani_s1"></div>
+            <div class="game-sprite dooly_ani_s2"></div>
+
+            
+            <!-- Ladder Box -->
+            <div class="ladder_box">
+                <div class="in_content">
+                    <!-- Top Element -->
+                    <div class="game-sprite i_icon o_s1"></div>
+                    <div class="game-sprite i_icon o_s2"></div>
+                    <!-- Bottom Element -->
+                    <div class="game-sprite i_icon o_e1"></div>
+                    <div class="game-sprite i_icon o_e2"></div>
+
+                    <!-- Y Line Elements -->
+                    <div class="line_left"></div>
+                    <div class="line_right"></div>
+
+                    <!-- X Line Elements -->
+                    <!-- Center Line 3 -->
+                    <ul class="width_line line_3">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                     <!-- Center Line 4 -->
+                    <ul class="width_line line_4">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                    <div class="result_set type1">
+                        <div class="in_content">
+                            <span class="ani_item t1"></span>
+                            <span class="ani_item t2"></span>
+                            <span class="ani_item t3"></span>
+                            <span class="ani_item t4"></span>
+                            <span class="ani_item t5"></span>
+                            <span class="ani_item t6"></span>
+                            <span class="ani_item t7"></span>
+                        </div>
+                    </div>
+
+                    <div class="result_set type2">
+                        <div class="in_content">
+                            <span class="ani_item t1"></span>
+                            <span class="ani_item t2"></span>
+                            <span class="ani_item t3"></span>
+                            <span class="ani_item t4"></span>
+                            <span class="ani_item t5"></span>
+                            <span class="ani_item t6"></span>
+                            <span class="ani_item t7"></span>
+                            <span class="ani_item t8"></span>
+                            <span class="ani_item t9"></span>
+                        </div>
+                    </div>
+
+                    <div class="result_set type3">
+                        <div class="in_content">
+                            <span class="ani_item t1"></span>
+                            <span class="ani_item t2"></span>
+                            <span class="ani_item t3"></span>
+                            <span class="ani_item t4"></span>
+                            <span class="ani_item t5"></span>
+                            <span class="ani_item t6"></span>
+                            <span class="ani_item t7"></span>
+                        </div>
+                    </div>
+
+                    <div class="result_set type4">
+                        <div class="in_content">
+                            <span class="ani_item t1"></span>
+                            <span class="ani_item t2"></span>
+                            <span class="ani_item t3"></span>
+                            <span class="ani_item t4"></span>
+                            <span class="ani_item t5"></span>
+                            <span class="ani_item t6"></span>
+                            <span class="ani_item t7"></span>
+                            <span class="ani_item t8"></span>
+                            <span class="ani_item t9"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ladder Box -->
+
+     
+        
         </div>
+
+        <!-- Result Sections -->
+        <div class="history scroll"></div>
+
+
+
     </div>
 </body>
 <script src="./assets/js/script.js"></script>
