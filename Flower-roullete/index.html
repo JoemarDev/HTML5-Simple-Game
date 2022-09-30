@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Flower Roullete</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+</head>
+<body onload="InitSounds()">
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+         
+        <!-- Game Screen Section -->
+        <div id="game-screen">
+            <div class="game-sprite wheel front"></div>
+            <div class="game-sprite wheel back"></div>
+            <div class="game-sprite pin" ></div>
+            <div class="game-sprite gold1"></div>
+            <div class="game-sprite gold2"></div>
+            <div class="game-sprite center">
+                <div><strong id="timer" class="timer">-</strong>초 후</div>
+                <div class="round_box"><strong id="round" class="round">-</strong>회차 결과가</div>
+                <div>발표 됩니다</div>
+            </div>
+            <div class="game-sprite result_box"> </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="history scroll"></div>
+
+
+
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
