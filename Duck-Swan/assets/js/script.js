@@ -440,6 +440,7 @@ const CreateResultBoxContent = (Round , Top , Count , Result) => {
 };
 
 const ResetAnimation = () => {
+    $('.tab_type').hide();
     $('.tab_start_1').removeClass('turn');
     $('.tab_start_2').removeClass('turn');
     $('.tab_start_1').removeClass('result_1');
