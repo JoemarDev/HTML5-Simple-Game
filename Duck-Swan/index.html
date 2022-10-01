@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Duck and Swan</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+</head>
+<body onload="InitSounds()">
+    <!-- Game Section -->
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+
+        <!-- Game Screen Section -->
+        <div id="game-screen">
+            
+            <!-- Timer Box Section -->
+            <div class="timer_box">
+                <strong id="timer" class="timer">-</strong>초 후
+                <br>
+                <strong id="round" class="round">-</strong>회차 결과가 발표 됩니다
+            </div>
+
+            <!-- Result Box -->
+            <div class="game-sprite result_box">
+             
+            </div>
+
+
+            <!-- Top Duck Sprite -->
+            <span class="game-sprite tab_start_1" ></span>
+            <span class="game-sprite tab_start_2" ></span>
+
+            <!-- Duck Animation -->
+            <div class="tab_type s_type1">
+                <span class="game-sprite s_small s1"></span>
+                <span class="game-sprite s_big s2"></span>
+                <span class="game-sprite s_small s3"></span>
+            </div>
+
+            <div class="tab_type s_type2">
+                <span class="game-sprite s_small s1"></span>
+                <span class="game-sprite s_big s2"></span>
+                <span class="game-sprite s_big s3"></span>
+                <span class="game-sprite s_small s4"></span>
+            </div>
+
+            <div class="tab_type s_type3">
+                <span class="game-sprite s_small s1"></span>
+                <span class="game-sprite s_big s2"></span>
+                <span class="game-sprite s_small s3"></span>
+            </div>
+
+            <div class="tab_type s_type4">
+                <span class="game-sprite s_small s1"></span>
+                <span class="game-sprite s_big s2"></span>
+                <span class="game-sprite s_big s3"></span>
+                <span class="game-sprite s_small s4"></span>
+            </div>
+            <!-- Duck Animation -->
+
+            <!-- Result Section -->
+            <span class="game-sprite tab_result_1" id="test"></span>
+            <span class="game-sprite tab_result_2"></span>
+
+        </div>
+        <!-- Game Screen Section -->
+
+        <div class="history scroll">
+          
+        </div>
+    </div>
+    <!-- Game Section -->
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
