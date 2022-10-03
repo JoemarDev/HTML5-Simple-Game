@@ -99,7 +99,7 @@ const RunGameTimeAndRound = (city, offset) => {
         // get korean timezone seconds
         const GameSec = (60 - nd.getSeconds()).toString().padStart(2, '0');
 
-        //InitPreAnim(GameSec);
+        InitPreAnim(GameSec);
 
         if (GameSec == 60) {
             backgroundMusic.pause();
