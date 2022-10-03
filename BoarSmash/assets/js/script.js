@@ -100,7 +100,7 @@ const RunGameTimeAndRound = (city, offset) => {
         // get korean timezone seconds
         const GameSec = (60 - nd.getSeconds()).toString().padStart(2, '0');
 
-        // InitPreAnim(GameSec);
+        InitPreAnim(GameSec);
 
         if (GameSec == 60) {
             backgroundMusic.pause();
@@ -344,6 +344,8 @@ const RunAnimation = (Round , Top , Count , Result) => {
 const ResetAnimation = () => {
     $(".tab_start_1").removeAttr("style");
     $(".tab_start_2").removeAttr("style");
+    $(".tab_start_1").hide();
+    $(".tab_start_2").hide();
     $(".tab_apple_1").removeAttr("style");
     $(".tab_apple_2").removeAttr("style");
     $(".tab_count_1").removeAttr("style");
