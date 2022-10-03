@@ -8,8 +8,7 @@ Simple Game made with html css jquery.
  4. <a href="https://joemardev.github.io/HTML5-Simple-Game/Dolly-game/">Dolly Go</a>
  5. <a href="https://joemardev.github.io/HTML5-Simple-Game/Flower-roullete/">Flower Roullete</a>
  6. <a href="https://joemardev.github.io/HTML5-Simple-Game/Duck-Swan/">Duck or Swan ?</a>
- 6. <a href="https://joemardev.github.io/HTML5-Simple-Game/BoarSmash/">Boar Smash ?</a>
+ 7. <a href="https://joemardev.github.io/HTML5-Simple-Game/BoarSmash/">Boar Smash ?</a>
 
- BoarSmash
 
 
