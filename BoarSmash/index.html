@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Boar Smash</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+</head>
+<body onload="InitSounds()">
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+        
+        <div id="game-screen">
+
+            <!-- Timer Section -->
+            <div class="timer_box" id="test">
+                <strong id="timer" class="timer">-</strong>초 후
+                <strong id="round" class="round">-</strong>회차 결과가 발표 됩니다
+            </div>
+            <!-- Result Box Element -->
+            <div class="game-sprite result_box" ></div>
+
+
+            <!-- Game Animation Section -->
+            <span class="game-sprite tab_tree_1"></span>
+            <span class="game-sprite tab_tree_2 "></span>
+            <span class="game-sprite tab_apple_1 "></span>
+            <span class="game-sprite tab_apple_2 "></span>
+            <span class="game-sprite tab_start_1" ></span>
+            <span class="game-sprite tab_start_2" ></span>
+            <span class="game-sprite tab_count_1"></span>
+            <span class="game-sprite tab_count_2"></span>
+            <span class="game-sprite tab_count_3"></span>
+            <span class="game-sprite tab_count_4"></span>
+
+        </div>
+
+        <!-- History Section -->
+        <div class="history scroll"></div>
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
