@@ -338,7 +338,7 @@ const GetResult = async() => {
             populateResult(res, 'result');
             populateResult(res, 'history');
             backgroundMusic.play();
-        }, 7000);
+        }, 5000);
     });
 
    
