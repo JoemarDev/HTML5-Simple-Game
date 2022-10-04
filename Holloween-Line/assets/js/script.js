@@ -394,6 +394,8 @@ const RefreshHistory = () => {
 
 
 const ResetAnimation = () => {
+    $('.b_ladder_3').hide();
+    $('.b_ladder_4').hide();
     $('.i_icon').removeClass('on');
     $('.ani_type1 span').removeAttr('style');
     $('.ani_type2 span').removeAttr('style');
