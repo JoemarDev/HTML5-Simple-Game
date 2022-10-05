@@ -9,7 +9,95 @@
     <title>Marvel Line</title>
     <script src="./assets/js/jquery-3.6.1.min.js"></script>
 </head>
-<body>
-    
+<body onload="InitSounds()">
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+
+        <div id="game-screen">
+             <!-- Timer Box Element -->
+             <div class="game-sprite timer_box">
+                <strong id="timer" class="timer">-</strong>초 후 <br>
+                <strong id="round" class="round">-</strong>회차 결과가 발표됩니다
+            </div>
+            <img src="assets/images/y_005.png" class="ani01">
+
+            <div class="game-sprite i_icon i_start_left"></div>
+            <div class="game-sprite i_icon i_start_right"></div>
+            <div class="game-sprite i_icon i_result_left"></div>
+            <div class="game-sprite i_icon i_result_right"></div>
+
+               <!-- Ladder Box Section -->
+               <div class="ladder_box">
+                <div class="in_content">
+                    <span class="b_ladder_left"></span>
+                    <span class="b_ladder_right"></span>
+
+                    <div class="b_ladder_3 hide">
+                        <span class="b_ladder_bar"></span>
+                        <span class="b_ladder_bar"></span>
+                        <span class="b_ladder_bar"></span>
+                    </div>
+
+                    <div class="b_ladder_4 hide">
+                        <span class="b_ladder_bar"></span>
+                        <span class="b_ladder_bar"></span>
+                        <span class="b_ladder_bar"></span>
+                        <span class="b_ladder_bar"></span>
+                    </div>
+                    <div class="ani_type1 hide">
+                        <span class="b_s1"></span>
+                        <span class="b_s2"></span>
+                        <span class="b_s3"></span>
+                        <span class="b_s4"></span>
+                        <span class="b_s5"></span>
+                        <span class="b_s6"></span>
+                        <span class="b_s7"></span>
+                    </div>
+                    <div class="ani_type2 hide">
+                        <span class="b_s1"></span>
+                        <span class="b_s2"></span>
+                        <span class="b_s3"></span>
+                        <span class="b_s4"></span>
+                        <span class="b_s5"></span>
+                        <span class="b_s6"></span>
+                        <span class="b_s7"></span>
+                        <span class="b_s8"></span>
+                        <span class="b_s9"></span>
+                    </div>
+                    <div class="ani_type3 hide">
+                        <span class="b_s1"></span>
+                        <span class="b_s2"></span>
+                        <span class="b_s3"></span>
+                        <span class="b_s4"></span>
+                        <span class="b_s5"></span>
+                        <span class="b_s6"></span>
+                        <span class="b_s7"></span>
+                    </div>
+                    <div class="ani_type4 hide">
+                        <span class="b_s1"></span>
+                        <span class="b_s2"></span>
+                        <span class="b_s3"></span>
+                        <span class="b_s4"></span>
+                        <span class="b_s5"></span>
+                        <span class="b_s6"></span>
+                        <span class="b_s7"></span>
+                        <span class="b_s8"></span>
+                        <span class="b_s9"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Ladder Box Section -->
+        </div>
+
+        <div class="history scroll"> </div>
+
+    </div>
 </body>
+<script src="./assets/js/script.js"></script>
 </html>
