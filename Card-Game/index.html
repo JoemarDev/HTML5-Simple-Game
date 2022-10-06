@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Card Game</title>
+   
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+     <script src="./assets/js/jquery.flip.min.js"></script>
+   
+</head>
+<body>
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+
+        <div id="game-screen">
+            <div class="inner-content">
+                <div class="card_box">
+                    <div class="imgflower_card default"></div>
+                    <div class="hidden_card">
+                        <div id="flower_card" class="flip" >
+                            <div class="front imgflower_card" ></div>
+                            <div class="back  imgflower_card"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timer_box" id="test">
+                    <strong id="timer" class="timer">-</strong>초 후
+                    <strong id="round" class="round">-</strong>회차 결과가 발표됩니다
+                </div>
+            </div>
+        </div>
+
+        <div class="history scroll">
+            <div class="listitem">
+                <div class="round">355회차</div>
+                <div class="game-sprite icon_result_2"></div>
+                <div class="game-sprite icon_underover_2"></div>
+                <div class="game-sprite icon_card_9"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>

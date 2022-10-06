@@ -1,0 +1,349 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0efed;
+    min-width: 850px;
+}
+
+
+
+#game .scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #696f7a;
+}
+
+#game .scroll::-webkit-scrollbar-thumb {
+    background-color: #262424;
+}
+
+#game .scroll::-webkit-scrollbar-track {
+
+    background-color: #696f7a;
+}
+
+
+
+.game-sprite {
+    background: url('../images/img_flower.png');
+}
+
+.imgflower_card {
+    display: inline-block;
+    background-image: url('../images/card_01.png');
+}
+
+
+
+
+
+/* fonts */
+@font-face {
+    font-family: 'NotoSansKR-regular';
+    src: url('../fonts/NotoSansKR-Regular.otf');
+}
+
+
+#game {
+    background: url('../images/bg.png');
+    width: 850px;
+    height: 850px;
+    position: relative;
+    font-family: 'NotoSansKR-regular';
+    background-repeat: no-repeat;
+}
+
+
+
+/* Config Buttons  */
+.config {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.config li {
+    height: 42px;
+    width: 42px;
+    background: #fff;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.config li:active {
+    transform: scale(0.8);
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.config li.sound {
+    background: url('../images/img_flower.png');
+    background-position: -42px 0;
+}
+
+.config .sound.on {
+    opacity: 0.2;
+}
+
+.config li.music {
+    background: url('../images/img_flower.png');
+    background-position: 0px 0;
+}
+
+.config .music.on {
+    opacity: 0.2;
+}
+
+
+.config li.reload {
+    background: url('../images/img_flower.png');
+    background-position: -84px 0;
+}
+
+
+/* Game Screen */
+#game-screen {
+    position: relative;
+    width: 437px;
+    height: 472px;
+    left: 100px;
+    top: 288px;
+}
+
+
+#game-screen  .timer_box {
+    margin-top: 12px;
+    width: 100%;
+    height: 43px;
+    line-height: 33px;
+    text-align: center;
+}
+
+#game-screen  .timer_box .timer {
+    color: #ed2026;
+}
+
+#game-screen  .timer_box .round {
+    color: #000000;
+}
+
+
+#game-screen .inner-content {
+    width: 389px;
+    height: 420px;
+    padding: 26px;
+}
+
+
+#game-screen  .card_box {
+    position: relative;
+    width: 100%;
+    height: 263px;
+}
+
+#game-screen  .default {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 193px;
+    height: 263px;
+    background-position: 0 0;
+}
+
+
+#game-screen  .hidden_card .flip {
+    width: 193px;
+    height: 263px;
+}
+
+#game-screen  .hidden_card {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 193px;
+    height: 263px;
+}
+
+#game-screen  .front {
+    width: 193px;
+    height: 263px;
+    background-position: -579px -526px;
+}
+
+
+#game-screen .back {
+    width: 193px;
+    height: 263px;
+    display: none;
+}
+
+#game-screen .back.s2 {
+    background-position: -193px 0;
+}
+
+#game-screen .back.s3 {
+    background-position: -386px 0;
+}
+
+#game-screen .back.s4 {
+    background-position: -579px 0;
+}
+
+#game-screen .back.s5 {
+    background-position: -772px 0;
+}
+
+#game-screen .back.s6 {
+    background-position: 0 -263px;
+}
+
+#game-screen .back.s7 {
+    background-position: -193px -263px;
+}
+
+#game-screen .back.s8 {
+    background-position: -386px -263px;
+}
+
+#game-screen .back.s9 {
+    background-position: -579px -263px;
+}
+
+#game-screen .back.s10 {
+    background-position: -772px -263px;
+}
+
+#game-screen .back.s11 {
+    background-position: 0 -526px;
+}
+
+#game-screen .back.s12 {
+    background-position: -193px -526px;
+}
+
+#game-screen .back.s13 {
+    background-position: -386px -526px;
+}
+
+
+
+#game .history {
+    position: absolute;
+    top: 368px;
+    right: 84px;
+    width: 191px;
+    height: 355px;
+    overflow-y: scroll;
+}
+
+#game .history .listitem {
+    height: 40px;
+    width: 176px;
+    line-height: 38px;
+    border-radius: 10px;
+    background-color: #535353;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#game .history .round {
+    margin-right: 8px;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#game .history .listitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#game .history .game-sprite {
+    width: 28px;
+    height: 28px;
+    line-height: 1;
+    vertical-align: middle;
+    margin-right: -1px;
+    position: relative;
+    top: -1px;
+    margin-right: 2px;
+}
+
+#game .icon_result_1 {
+    background-position: -143px 0;
+}
+
+#game .icon_result_2 {
+    background-position: -171px 0;
+}
+
+#game .icon_underover_1 {
+    background-position: -199px 0;
+}
+
+#game .icon_underover_2 {
+    background-position: -227px 0;
+}
+
+#game .icon_card_1 {
+    background-position: -255px 0;
+}
+
+#game .icon_card_2 {
+    background-position: -283px 0;
+}
+
+#game .icon_card_3 {
+    background-position: -311px 0;
+}
+
+#game .icon_card_4 {
+    background-position: -339px 0;
+}
+
+#game .icon_card_5 {
+    background-position: -367px 0;
+}
+
+#game .icon_card_6 {
+    background-position: -395px 0;
+}
+
+#game .icon_card_7 {
+    background-position: -423px 0;
+}
+
+#game .icon_card_8 {
+    background-position: -451px 0;
+}
+
+#game .icon_card_9 {
+    background-position: -479px 0;
+}
+
+#game .icon_card_10 {
+    background-position: -507px 0;
+}
+
+#game .icon_card_11 {
+    background-position: -535px 0;
+}
+
+#game .icon_card_12 {
+    background-position: -563px 0;
+}
+
+#game .icon_card_13 {
+    background-position: -591px 0;
+}
