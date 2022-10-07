@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Sjy Roullete</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/jQueryRotate.js"></script>
+</head>
+<body onload="InitSounds()">
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+
+        <div id="game-screen">
+            <div class="item logo_pin"></div>
+            <!-- Roullete Content -->
+            <div class="item roulette_content">
+                <!-- In Content -->
+                <div class="in_content">
+                    <div class="item roulette_01_shadow"></div>
+                    <div class="item roulette_01"></div>
+                    
+                    <div class="item roulette_02_content">
+                        <div class="in_content">
+                            <div class="item roulette_02" style="transform: rotate(-53deg); transform-origin: 50% 50%;"></div>
+                            <div class="item roulette_02_shadow"></div>
+                        </div>
+                    </div>
+
+                    <div class="item roulette_center">
+                        <div class=""><span id="timer" class="number">-</span>초 후</div>
+                        <div><span class="yellow"><span class="round number" id="round">-</span>차 룰렛</span>을</div>
+                        <div>시작합니다</div>
+                    </div>
+
+                    <div class="item roulette_center_ani"> </div>
+                    <div class="item roulette_result_board hide"></div>
+                    <div class="item roulette_pin_02"></div>
+                    
+
+                </div>
+                <!-- In Content -->
+            </div>
+            <!-- Roullete Content -->
+
+            <div class="item history">
+                <div class="in_content">
+                    <h2>회차별 당첨 리스트</h2>
+                    <div class="result_list scroll">
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item cloud01"></div>
+            <div class="item cloud02"></div>
+            <div class="item cloud03"></div>
+            <div class="item cloud04"></div>
+            <div class="item cloud05"></div>
+            <div class="item cloud06"></div>
+            <div class="item cloud07"></div>
+            
+        </div>
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
