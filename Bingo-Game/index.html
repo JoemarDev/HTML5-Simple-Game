@@ -5,11 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Bingo Game</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
 </head>
 
-<body>
+<body onload="InitSounds()">
+    <div id="game">
+        <!-- Config Section -->
+        <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
 
+        <div id="game-screen">
+            <div class="item logo"></div>
+            <div class="item clock"><span>현재시간</span> <span class="game-clock"></span></div>
+            <div class="item bingo_game"></div>
+            <div class="item bingo_bg">
+                <div class="in_content">
+                    <div class="item machine"></div>
+                    <div class="item ball_base"></div>
+                    <div class="item machine_cover"></div>
+                    <div class="item timer_box">
+                        <div class="in_content">
+                            <div class=""><span id="timer" class="number">-</span>초 후</div>
+                            <div><span class="yellow"><span class="round number" id="round">-</span>차 빙고게임</span>을</div>
+                            <div>시작합니다</div>
+                        </div>
+                    </div>
+                    <div class="item result_ball">
+                      
+                    </div>
+                    <div class="item ball_box">
+                        <div class="in_content">
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="item history">
+                <div class="in_content">
+                    <h2>회차별 당첨 리스트</h2>
+                    <div class="result_list scroll">
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item bingo_board bingo_red ">
+                <div class="in_content">
+                    <h2>빨강빙고판</h2>
+
+                    <div class="board">
+                        <div>
+                            <span class="bingo_item bingo_red_7"></span>
+                            <span class="bingo_item bingo_red_4"></span>
+                            <span class="bingo_item bingo_red_3"></span>
+                        </div>
+                        <div>
+                            <span class="bingo_item bingo_red_9"></span>
+                            <span class="bingo_item bingo_red_2"></span>
+                            <span class="bingo_item bingo_red_1"></span>
+                        </div>
+                        <div>
+                            <span class="bingo_item bingo_red_6"></span>
+                            <span class="bingo_item bingo_red_8"></span>
+                            <span class="bingo_item bingo_red_5 on"></span>
+                        </div>
+                        <div class="item bingo_win_bg bingo_end_set"></div>
+                        <div class="item bingo_win bingo_end_set" ></div>
+                    </div>       
+
+                </div>
+            </div>
+
+            <div class="item bingo_board bingo_blue ">
+                <div class="in_content ">
+                    <h2>파랑빙고판</h2>
+                    <div class="board ">
+                        <div>
+                            <span class="bingo_item bingo_blue_7"></span>
+                            <span class="bingo_item bingo_blue_4"></span>
+                            <span class="bingo_item bingo_blue_3"></span>
+                        </div>
+                        <div>
+                            <span class="bingo_item bingo_blue_9"></span>
+                            <span class="bingo_item bingo_blue_2"></span>
+                            <span class="bingo_item bingo_blue_1"></span>
+                        </div>
+                        <div>
+                            <span class="bingo_item bingo_blue_6"></span>
+                            <span class="bingo_item bingo_blue_8"></span>
+                            <span class="bingo_item bingo_blue_5 on"></span>
+                        </div>
+                        <div class="item bingo_win_bg bingo_end_set"></div>
+                        <div class="item bingo_win bingo_end_set" ></div>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
+<script src="./assets/js/script.js"></script>
 </html>

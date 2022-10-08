@@ -1,0 +1,692 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #afe9ec;
+    min-width: 850px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.hide {
+    display: none!important;
+}
+
+
+
+/* fonts */
+@font-face {
+    font-family: 'NotoSansKR-regular';
+    src: url('../fonts/NotoSansKR-Regular.otf');
+}
+
+#game {
+    background: url('../images/bg.png');
+    width: 850px;
+    height: 1310px;
+    position: relative;
+    font-family: 'NotoSansKR-regular';
+    background-size: cover;
+}
+
+
+
+#game .scroll::-webkit-scrollbar {
+    width: 17px;
+    background-color: #e5feff;
+}
+
+#game .scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    background-color: #228276;
+}
+
+#game .scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+    background-color: #aee6e7;
+}
+
+
+
+
+/* Config Buttons  */
+.config {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    z-index: 901;
+}
+
+.config li {
+    height: 42px;
+    width: 42px;
+    background: #fff;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.config li:active {
+    transform: scale(0.8);
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.config li.sound {
+    background: url('../images/etc_icon.png');
+    /* background-position: -126px 0; */
+}
+
+.config .sound.on {
+    background: url('../images/etc_icon.png');
+    background-position: -42px 0;
+}
+
+.config li.music {
+    background: url('../images/etc_icon.png');
+    background-position: -84px 0;
+}
+
+.config .music.on {
+    background: url('../images/etc_icon.png');
+    background-position: -126px 0;
+}
+
+
+.config li.reload {
+    background: url('../images/etc_icon.png');
+    background-position: -168px 0;
+}
+
+
+/* Bingo Styles */
+
+#game-screen {
+    position: relative;
+    left: 15px;
+}
+#game .item {
+    position: absolute;
+}
+
+#game-screen .logo {
+    width: 511px;
+    height: 246px;
+    top: 38px;
+    left: 154px;
+    z-index: 900;
+    background-image: url('../images/bingo_title.png');
+}
+
+
+#game-screen .clock {
+    width: 328px;
+    height: 71px;
+    top: 240px;
+    left: 255px;
+    z-index: 310;
+    background-image: url('../images/time_bg.png');
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 25px;
+    background-repeat: no-repeat;
+}
+
+
+#game-screen .bingo_bg {
+    width: 543px;
+    height: 661px;
+    top: 268px;
+    left: 52px;
+    z-index: 301;
+    background-image: url('../images/bingo_bg_03.png');
+}
+
+#game-screen .bingo_game {
+    width: 768px;
+    height: 1050px;
+    top: 246px;
+    left: 31px;
+    z-index: 300;
+    background-image: url('../images/bingo_bg_02.png');
+}
+
+#game-screen .machine {
+    width: 364px;
+    height: 496px;
+    top: 72px;
+    left: 85px;
+    z-index: 400;
+    background-image: url('../images/bingo_base.png');
+}
+
+#game-screen .ball_base {
+    width: 364px;
+    height: 496px;
+    top: 72px;
+    left: 85px;
+    z-index: 410;
+    background-image: url('../images/ball_base.png');
+}
+
+#game-screen .machine_cover {
+    width: 364px;
+    height: 496px;
+    top: 72px;
+    left: 85px;
+    z-index: 420;
+    background-image: url('../images/bingo_cu.png');
+}
+
+#game-screen .timer_box {
+    width: 160px;
+    height: 125px;
+    top: 432px;
+    left: 44px;
+    z-index: 450;
+    background-image: url('../images/ingame_tree_board.png');
+    padding: 10px 60px 10px 10px;
+}
+
+#game-screen .timer_box .in_content {
+    font-size: 17px;
+    color: #fffa39;
+    font-weight: bold;
+    font-family: tahoma;
+    text-align: center;
+    transform: rotate(-3deg);
+}
+
+#game-screen .result_ball {
+    width: 68px;
+    height: 68px;
+    top: 497px;
+    left: 250px;
+    z-index: 500;
+}
+
+#game-screen .ball_box {
+    width: 352px;
+    height: 48px;
+    top: 585px;
+    left: 94px;
+    z-index: 450;
+    background-image: url('../images/ingame_ball_list_bg.png');
+}
+
+
+#game-screen  .result_ball .big_ball {
+    display: inline-block;
+    width: 68px;
+    height: 68px;
+    background-image: url('../images/ball_big_set.png');
+}
+
+#game-screen  .result_ball .big_ball.s1 {
+    background-position: 0 0;
+}
+
+#game-screen  .result_ball .big_ball.s2 {
+    background-position: -68px 0;
+}
+
+#game-screen  .result_ball .big_ball.s3 {
+    background-position: -136px 0;
+}
+
+#game-screen  .result_ball .big_ball.s4 {
+    background-position: -204px 0;
+}
+
+#game-screen  .result_ball .big_ball.s5 {
+    background-position: -272px 0;
+}
+
+#game-screen  .result_ball .big_ball.s6 {
+    background-position: -340px 0;
+}
+
+#game-screen  .result_ball .big_ball.s7 {
+    background-position: -408px 0;
+}
+
+#game-screen  .result_ball .big_ball.s8 {
+    background-position: -476px 0;
+}
+
+#game-screen  .result_ball .big_ball.s9 {
+    background-position: -544px 0;
+}
+
+
+#game-screen .ball_box .small_ball {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background-image: url('../images/ball_small_set.png');
+}
+
+
+#game-screen .ball_box .in_content {
+    padding: 5px 10px 5px 10px;
+}
+
+
+#game-screen .ball_box .small_ball {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background-image: url('../images/ball_small_set.png' );
+}
+
+#game-screen .ball_box .small_ball.s1 {
+    background-position: 0 0;
+}
+
+#game-screen .ball_box .small_ball.s2 {
+    background-position: -38px 0;
+}
+
+#game-screen .ball_box .small_ball.s3 {
+    background-position: -76px 0;
+}
+
+#game-screen .ball_box .small_ball.s4 {
+    background-position: -114px 0;
+}
+
+#game-screen .ball_box .small_ball.s5 {
+    background-position: -152px 0;
+}
+
+#game-screen .ball_box .small_ball.s6 {
+    background-position: -190px 0;
+}
+
+#game-screen .ball_box .small_ball.s7 {
+    background-position: -228px 0;
+}
+
+#game-screen .ball_box .small_ball.s8 {
+    background-position: -266px 0;
+}
+
+#game-screen .ball_box .small_ball.s9 {
+    background-position: -304px 0;
+}
+
+
+#game .history {
+    width: 183px;
+    height: 661px;
+    top: 268px;
+    right: 60px;
+    z-index: 301;
+    background-image: url('../images/bingo_bg_04.png');
+}
+
+#game  .history .in_content {
+    padding: 0 25px 0 19px;
+}
+
+#game .history .in_content h2 {
+    font-family: tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    color: #136057;
+    letter-spacing: -1px;
+    padding: 20px 0 17px 0;
+    text-align: center;
+    margin: 0;
+}
+
+#game  .history .in_content .result_list {
+    width: 139px;
+    height: 578px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 10px 10px 10px 10px;
+    background: url('../images/bingo_bg_05.png') no-repeat;
+    text-align: center;
+}
+
+
+#game  .history .in_content .result_list .bing_box {
+    display: inline-block;
+    width: 96px;
+    height: 32px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+#game  .history .in_content .result_list .bing_box.red_bg {
+    background-image: url('../images/red_bg.png');
+}
+
+
+#game .history .in_content .result_list .bing_box.blue_bg {
+    background-image: url('../images/blue_bg.png');
+}
+
+
+#game .history .in_content .result_list .bing_box span.bingo_type {
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background-image: url('../images/bingo_type.png');
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    margin-left: 3px;
+    margin-right: 10px;
+}
+
+
+#game .history .in_content .result_list .bing_box span.number {
+    font-family: tahoma;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+#game .history .in_content .result_list  ul {
+    width: 90%;
+}
+
+
+#game .history .in_content .result_list .bing_box span.split {
+    color: #b1e1f9;
+}
+
+
+#game .history .in_content .result_list h3 {
+    font-family: tahoma;
+    font-size: 14px;
+    font-weight: 700;
+    color: #136057;
+    letter-spacing: -1px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0;
+}
+
+#game .history .in_content .result_list ul li {
+    border-bottom: 1px solid #29ad9e;
+    border-top: 1px solid #ddfdff;
+}
+
+
+#game .history .in_content .result_list ul li:first-child {
+    border-top: none;
+}
+
+
+#game .bingo_red {
+    width: 358px;
+    height: 339px;
+    top: 953px;
+    left: 52px;
+    z-index: 301;
+    background-image: url('../images/bingo_bg_07.png');
+}
+
+
+#game .bingo_blue {
+    width: 358px;
+    height: 339px;
+    top: 953px;
+    right: 70px;
+    z-index: 301;
+    background-image: url('../images/bingo_bg_06.png');
+}
+
+
+#game .bingo_board .in_content {
+    text-align: center;
+}
+
+
+#game .bingo_red .in_content h2 {
+    background-image: url('../images/title_01.png');
+}
+
+#game .bingo_blue .in_content h2 {
+    background-image: url('../images/title_02.png');
+    width: 161px;
+}
+
+
+#game .bingo_board .in_content h2 {
+    display: inline-block;
+    width: 160px;
+    height: 31px;
+    text-indent: -9999px;
+    margin: 22px 0 15px;
+}
+
+
+#game .bingo_board .in_content .board .bingo_item {
+    display: inline-block;
+    width: 84px;
+    height: 77px;
+    background-image: url('../images/number_set.png');
+}
+
+
+
+#game .ball_base.ani1{
+    background-position:-364px 0
+}
+
+#game .ball_base.ani2{
+    background-position:-728px 0
+}
+
+#game .ball_base.ani3{
+    background-position:-1092px 0
+}
+
+#game .ball_base.ani4{
+    background-position:-1456px 0
+}
+
+#game .ball_base.ani5{
+    background-position:-1820px 0
+}
+
+
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_1{
+    background-position:0 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_2{
+    background-position:-84px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_3{
+    background-position:-168px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_4{
+    background-position:-252px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_5{
+    background-position:-336px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_6{
+    background-position:-420px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_7{
+    background-position:-504px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_8{
+    background-position:-588px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_9{
+    background-position:-672px 0
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_1.on{
+    background-position:0 -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_2.on{
+    background-position:-84px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_3.on{
+    background-position:-168px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_4.on{
+    background-position:-252px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_5.on{
+    background-position:-336px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_6.on{
+    background-position:-420px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_7.on{
+    background-position:-504px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_8.on{
+    background-position:-588px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_red_9.on{
+    background-position:-672px -77px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_1{
+    background-position:0 -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_2{
+    background-position:-84px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_3{
+    background-position:-168px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_4{
+    background-position:-252px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_5{
+    background-position:-336px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_6{
+    background-position:-420px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_7{
+    background-position:-504px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_8{
+    background-position:-588px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_9{
+    background-position:-672px -232px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_1.on{
+    background-position:0 -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_2.on{
+    background-position:-84px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_3.on{
+    background-position:-168px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_4.on{
+    background-position:-252px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_5.on{
+    background-position:-336px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_6.on{
+    background-position:-420px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_7.on{
+    background-position:-504px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_8.on{
+    background-position:-588px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.bingo_blue_9.on{
+    background-position:-672px -309px
+}
+#game  .bingo_board .in_content .board .bingo_item.on{
+    position:relative;
+    z-index:550
+}
+
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s1{
+    background-position:0 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s2{
+    background-position:-27px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s3{
+    background-position:-54px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s4{
+    background-position:-81px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s5{
+    background-position:-108px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s6{
+    background-position:-135px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s7{
+    background-position:-162px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r1s8{
+    background-position:-189px 0
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s1{
+    background-position:0 -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s2{
+    background-position:-27px -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s3{
+    background-position:-54px -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s4{
+    background-position:-81px -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s5{
+    background-position:-108px -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s6{
+    background-position:-135px -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s7{
+    background-position:-162px -26px
+}
+#game .history .in_content .result_list .bing_box span.bingo_type.r2s8{
+    background-position:-189px -26px
+}
+
+
+
+#game .bingo_board .in_content .bingo_win_bg{
+    display:none;
+    top:0;
+    left:0;
+    width:352px;
+    height:333px;
+    background-image:url('../images/bingo_bg_13.png')
+}
+#game .bingo_board .in_content .bingo_win{
+    display:none;
+    top:-100px;
+    left:0;
+    width:356px;
+    height:185px;
+    z-index:560;
+    background-image:url('../images/win_text.png')
+}
