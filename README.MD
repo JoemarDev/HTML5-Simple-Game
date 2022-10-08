@@ -13,5 +13,5 @@ Simple Game made with html css jquery.
  9. <a href="https://joemardev.github.io/HTML5-Simple-Game/Marvel-Line/">Marvel Line</a>
  10. <a href="https://joemardev.github.io/HTML5-Simple-Game/Card-Game/">Flower Card</a>
  11. <a href="https://joemardev.github.io/HTML5-Simple-Game/Sky-game-roullete/">Sky Roullete</a>
-
+ 12. <a href="https://joemardev.github.io/HTML5-Simple-Game/Bingo-Game/">Bingo</a>
 
