@@ -107,11 +107,28 @@ const RunGameTimeAndRound = (city, offset) => {
         if(GameSec < 2) {
             $('.ani01').fadeOut();
         } 
+
         if (GameSec == 60) {
-            backgroundMusic.pause();
-            resultMusic.play();
-            GetResult();
+            if(isGameReady === true) {
+                backgroundMusic.pause();
+                resultMusic.play();
+                GetResult();
+            }
         }
+
+        if(!isGameReady) {
+            if(GameSec > 4) {
+                GetNextPlaceHolder();
+                isGameReady = true;
+            } else {
+                setTimeout(() => {
+                    GetNextPlaceHolder();
+                    isGameReady = true ;
+                },6000)
+            }    
+        }
+       
+    
         $('#game .game-clock').html(FormatDate(d));
         $('#game-screen #round').html(GameRound);
         $('#game-screen #timer').html(GameSec == 60 ? 0 : GameSec);
@@ -274,5 +291,5 @@ const RefreshHistory = () => {
 }
 
 RefreshHistory();
-GetNextPlaceHolder();
+
 RunGameTimeAndRound('korea', '+9');
