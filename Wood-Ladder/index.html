@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Wood Ladder</title>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+
+</head>
+<body  onload="InitSounds()">
+    <div id="game">
+        <!-- Config Section -->
+           <ul class="config">
+            <li class="sound" onclick="Toogle(this); SoundEffectToogle(this)"></li>
+            <li class="music" onclick="Toogle(this); MusicToogle(this);"></li>
+            <li class="reload" onclick="ReloadWindow();"></li>
+        </ul>
+        <!-- Config Section -->
+
+
+        <div id="game-screen">
+            <div class="item logo"></div>
+            <!-- Ladder Box -->
+            <div class="ladder-box">
+                <div class="item clock">2022.10.11 10:29:32</div>
+
+                <!-- Waiting Box Section -->
+                <div class="item wait_box">
+                    <div><strong id="timer" class="number">-</strong>초 후</div>
+                    <br>
+                    <strong class="round number" id="round">-</strong>차 게임을 시작합니다.
+                </div>
+
+
+                <!-- Game Start Icon -->
+                <div class="item start_icon s1"></div>
+                <div class="item start_icon s2"></div>
+
+                <!-- Ladder Section -->
+
+                <div class="item ladder_bg">
+                    <div class="ladder_type1 in_content">
+                        <div class="item t1 sh"></div>
+                        <div class="item t2 sw"></div>
+                        <div class="item t3 sh"></div>
+                        <div class="item t4 sw wmg"></div>
+                        <div class="item t5 sh"></div>
+                        <div class="item t6 sw"></div>
+                        <div class="item t7 sh"></div>
+                    </div>
+                    <div class="ladder_type2 in_content">
+                        <div class="item t1 sh"></div>
+                        <div class="item t2 sw wmg"></div>
+                        <div class="item t3 sh"></div>
+                        <div class="item t4 sw"></div>
+                        <div class="item t5 sh"></div>
+                        <div class="item t6 sw wmg"></div>
+                        <div class="item t7 sh"></div>
+                    </div>
+                    <div class="ladder_type3 in_content">
+                        <div class="item t1 sh"></div>
+                        <div class="item t2 sw"></div>
+                        <div class="item t3 sh"></div>
+                        <div class="item t4 sw wmg"></div>
+                        <div class="item t5 sh"></div>
+                        <div class="item t6 sw"></div>
+                        <div class="item t7 sh"></div>
+                        <div class="item t8 sw wmg"></div>
+                        <div class="item t9 sh"></div>
+                    </div>
+                    <div class="ladder_type4 in_content">
+                        <div class="item t1 sh"></div>
+                        <div class="item t2 sw wmg"></div>
+                        <div class="item t3 sh"></div>
+                        <div class="item t4 sw"></div>
+                        <div class="item t5 sh"></div>
+                        <div class="item t6 sw wmg"></div>
+                        <div class="item t7 sh"></div>
+                        <div class="item t8 sw"></div>
+                        <div class="item t9 sh"></div>
+                    </div>
+                </div>
+                <!-- Ladder Section -->
+
+                <div class="item end_icon s1"></div>
+                <div class="item end_icon s2"></div>
+
+            </div>
+            <!-- Ladder Box -->
+
+            <!-- history section -->
+            <div class="history item">
+                <h2>회차별 당첨 리스트</h2>
+                <div class="result_list scroll">
+                    <ul>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
