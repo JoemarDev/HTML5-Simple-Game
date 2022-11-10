@@ -1,0 +1,60 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>MEGA Ladder GAME</title>
+      <link rel="stylesheet" type="text/css" href="./style.css?v=20180907_2">
+      <script src="./assets/js/jquery-3.6.1.min.js"></script>
+   </head>
+   <body>
+      <div id="squirrel_ladder">
+         <div id="squirrel_ladder2">
+            <img src="./img/bg_logo.png" alt="" style="position: absolute;width: 420px;left: 15rem;top: -65px;">
+            <div class="ladder_bg" style="background: #f55350; width: 100%; height: 430px; position: relative; top:220px;"></div>
+            <div class="menu_sound">
+               <ul>
+                  <li id="sound_off" onclick="sound_switch('off');" class="active"><img src="./img/sound_off_active.png"></li>
+                  <li id="sound_on" onclick="sound_switch('on');" class=""><img src="./img/sound_on_active.png"></li>
+               </ul>
+            </div>
+            <div class="canvas">
+               <div class="game_wrap">
+                  <div class="ladder_shape">
+                     <i id="bri1-0"></i>
+                     <i id="bri1-1"></i>
+                     <i id="bri1-2"></i>
+                     <i id="bri1-3"></i>
+                     <i id="bri1-4"></i>
+                     <i id="bri1-5"></i>
+                     <i id="bri1-6"></i>
+                     <i id="bri1-7"></i>
+                     <i id="bri2-0"></i>
+                     <i id="bri2-1"></i>
+                     <i id="bri2-2"></i>
+                     <i id="bri2-3"></i>
+                     <i id="bri2-4"></i>
+                     <i id="bri2-5"></i>
+                     <i id="bri2-6"></i>
+                     <i id="bri2-7"></i>
+                     <div id="ramji" class="blue"><img src="./img/ramji1.gif"></div>
+                     <div id="ramji" class="red"><img src="./img/ramji2.gif"></div>
+                     </div>
+                  <div class="line left"></div>
+                  <div class="line right"></div>
+                  <div class="round left top"><img id="result_left_icon" src="./img/game_icon_left.png"></div>
+                  <div class="round right top"><img id="result_right_icon" src="./img/game_icon_right.png"></div>
+                  <div class="round left bottom"><img id="result_odd_icon" src="./img/game_icon_odd.png"></div>
+                  <div class="round right bottom"><img id="result_even_icon" src="./img/game_icon_even.png"></div>
+                  <div class="info"><span><span id="timer">0 분 0 초</span><br> 후 <span id="round"></span> 회차가 시작됩니다.</span></div>
+               </div>
+            </div>
+            <div class="result">
+               <ul id="game_result_box">
+                
+               </ul>
+            </div>
+            <div id="sound_bgm"></div>
+         </div>
+      </div>
+   </body>
+   <script src="./assets/js/script.js"></script>
+</html>
