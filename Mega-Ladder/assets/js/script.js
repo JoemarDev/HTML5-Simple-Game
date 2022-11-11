@@ -1,7 +1,7 @@
 const URL = "https://realbet-server.online/api";
 // const URL = "http://127.0.0.1:8000/api";
 const backgroundMusic = new Audio('./assets/sounds/ladder_bg.mp3');
-const resultMusic = new Audio('./assets/sounds/ladder_play.mp3');
+const resultMusic = new Audio('./assets/sounds/start0.mp3');
 let isBrowserSoundReady = false;
 let globalSeconds = 0;
 let round = 0;
@@ -17,48 +17,47 @@ var drawLaddered = false;
 
 // Config and sound script
 
-const Toogle = (elem) => {
-    return $(elem).hasClass('on') ? $(elem).removeClass('on') : $(elem).addClass('on');
-}
+const sound_switch = (type) => {
+    
+    $('.menu_sound li').removeClass("active");
 
-const ReloadWindow = (elem) => {
-    window.location.reload();
-}
-
-const InitSounds = async () => {
-    isBrowserSoundReady = true;
-    await CheckConfigSaved();
-    backgroundMusic.loop = true;
-    backgroundMusic.play();
-}
-
-
-const MusicToogle = (elem) => {
-    localStorage.setItem("sounds", (!$(elem).hasClass('on')));
-    backgroundMusic.muted = $(elem).hasClass('on');
-};
-
-const SoundEffectToogle = (elem) => {
-    localStorage.setItem("effect", (!$(elem).hasClass('on')));
-    resultMusic.muted = $(elem).hasClass('on');
-};
-
-
-const CheckConfigSaved = () => {
-    let soundConfig = localStorage.getItem("sounds");
-    let effectConfig = localStorage.getItem("effect");
-
-    if (soundConfig == 'false') {
-        backgroundMusic.muted = true;
-        $('.music').addClass('on');
+    if(type == 'off') {
+        $('#sound_off').addClass("active");
+        window.localStorage.setItem("sound" ,"off");
+        resultMusic.volume = 0;
     }
 
-    if (effectConfig == 'false') {
-        resultMusic.muted = true;
-        $('.sound').addClass('on');
+    if(type == 'on') {
+        $('#sound_on').addClass("active");
+        window.localStorage.setItem("sound" ,"on");
+        resultMusic.volume = 1;
     }
 }
 
+const CheckSoundConfig = () => {
+
+    let sound = window.localStorage.getItem("sound");
+    $('.menu_sound li').removeClass("active");
+
+
+    if(sound == null || sound === undefined) {
+        $('#sound_on').addClass("active");
+        window.localStorage.setItem("sound" ,"on");
+        resultMusic.volume = 1;
+    }
+
+    if(sound == 'on') {
+        $('#sound_on').addClass("active");
+        resultMusic.volume = 1;
+    }
+
+    if(sound == 'off') {
+        $('#sound_off').addClass("active");
+        resultMusic.volume = 0;
+    }
+
+
+}
 
 
 // Time And Round Script
@@ -105,11 +104,11 @@ const RunGameTimeAndRound = (city, offset) => {
         // get korean timezone seconds
         const GameSec = (60 - nd.getSeconds()).toString().padStart(2, '0');
     
+        if(GameSec == 8 && minute == 0) {
+            resultMusic.play();
+        }
 
         if (GameSec == 60 && minute == 1) {
-
-            // backgroundMusic.pause();
-            // resultMusic.play();
             GetResult();
         }
 
@@ -131,7 +130,6 @@ const GetResult = async() => {
     // let Bottom = RandomBotPosition[GetRand(RandomBotPosition.length)];
 
     $.ajax(URL + '/mega-ladder').then((res) => {
-        console.log(res);
         let top = res.top == 'left' ? 1 : 2;
         let line = res.line == 3 ? 3 : 4;
 
@@ -139,7 +137,6 @@ const GetResult = async() => {
 
         setTimeout(() => {
             populateResult(res, 'history');
-            backgroundMusic.play();
         }, 5000);
     });
 
