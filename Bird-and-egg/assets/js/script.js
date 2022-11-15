@@ -1,5 +1,5 @@
-// const URL = "https://realbet-server.online/api";
-const URL = "http://127.0.0.1:8000/api";
+const URL = "https://realbet-server.online/api";
+// const URL = "http://127.0.0.1:8000/api";
 const backgroundMusic = new Audio('./assets/sounds/hblb_bg.mp3');
 const resultMusic = new Audio('./assets/sounds/hblb_play.mp3');
 let isBrowserSoundReady = false;
